@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Prediction</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="login">
+        <h1>Breast Cancer Prediction</h1>
+        <form action="http://localhost:5000/" method="POST">
+            <div class="form-group">
+                <label for="query1">radius_mean:</label>
+                <textarea class="form-control" rows="2" id="query1" name="query1" autofocus>{{ query1 }}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="query2">texture_mean:</label>
+                <textarea class="form-control" rows="2" id="query2" name="query2">{{ query2 }}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="query3">perimeter_mean:</label>
+                <textarea class="form-control" rows="2" id="query3" name="query3">{{ query3 }}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="query4">smoothness_mean:</label>
+                <textarea class="form-control" rows="2" id="query4" name="query4">{{ query4 }}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="query5">compactness_mean:</label>
+                <textarea class="form-control" rows="2" id="query5" name="query5">{{ query5 }}</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" name="submit">SUBMIT</button>
+        </form>
+        <div class="results">
+            <textarea class="form-control" rows="2" id="output1" name="query6" readonly>{{ output1 }}</textarea>
+            <textarea class="form-control" rows="2" id="output2" name="query7" readonly>{{ output2 }}</textarea>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,4 +1,0 @@
-numpy
-flask
-pickle4
-scikit-learn
